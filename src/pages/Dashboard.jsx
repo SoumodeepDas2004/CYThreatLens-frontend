@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCountryStats, scanIP } from "../services/api";
-
+import WorldMap from "../components/WorldMap";
+import LatestScans from "../components/LatestScans";
 export default function Dashboard() {
     const [stats, setStats] = useState([]);
     const [ip, setIp] = useState("");
@@ -32,7 +33,7 @@ export default function Dashboard() {
 
         const interval = setInterval(() => {
             loadData();
-        }, 10000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
@@ -88,10 +89,10 @@ export default function Dashboard() {
                         </p>
                     </div>
                 )}
+                <LatestScans />
             </div>
-
             {/* 📊 Country Stats */}
-            <h3>Country Threat Overview (Auto Refresh: 10s)</h3>
+            <h3>Country Threat Overview </h3>
 
             <table border="1" cellPadding="8" style={{ marginTop: "20px", background: "#1e293b" }}>
                 <thead>
@@ -113,6 +114,7 @@ export default function Dashboard() {
                     ))}
                 </tbody>
             </table>
+            <WorldMap />
         </div>
     );
 }
