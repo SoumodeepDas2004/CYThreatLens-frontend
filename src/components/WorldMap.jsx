@@ -33,8 +33,8 @@ export default function WorldMap() {
                 style={{ height: "500px", width: "100%", borderRadius: "10px" }}
             >
                 <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
+                    url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                    />
 
                 {data.map((item, index) => (
                     <CircleMarker
@@ -57,6 +57,7 @@ export default function WorldMap() {
                     </CircleMarker>
                 ))}
             </MapContainer>
+            
         </div>
     );
 }

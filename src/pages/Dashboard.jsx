@@ -58,7 +58,7 @@ export default function Dashboard() {
         );
     };
     return (
-        <div style={{ padding: "20px", background: "#0f172a", color: "white", minHeight: "100vh" }}>
+        <div className="app-container">
             <h1>CYThreatLens Dashboard</h1>
 
             {/* 🔥 Scan Section */}
