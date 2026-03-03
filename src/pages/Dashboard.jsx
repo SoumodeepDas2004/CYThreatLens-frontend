@@ -61,7 +61,7 @@ export default function Dashboard() {
         <div className="app-container">
             <h1>CYThreatLens Dashboard</h1>
 
-            {/* 🔥 Scan Section */}
+            {/*  Scan Section */}
             <div style={{ marginBottom: "30px", background: "#1e293b", padding: "20px", borderRadius: "8px" }}>
                 <h3>Scan IP Address</h3>
 
@@ -91,7 +91,7 @@ export default function Dashboard() {
                 )}
                 <LatestScans />
             </div>
-            {/* 📊 Country Stats */}
+            {/*  Country Stats */}
             <h3>Country Threat Overview </h3>
 
             <table border="1" cellPadding="8" style={{ marginTop: "20px", background: "#1e293b" }}>

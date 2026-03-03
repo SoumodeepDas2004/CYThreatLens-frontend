@@ -23,8 +23,8 @@ export default function LatestScans() {
     };
 
     return (
-        <div style={{ marginTop: "30px", background: "#1e293b", padding: "20px", borderRadius: "10px" }}>
-            <h3>Latest 10 Threat Scans</h3>
+        <div style={{ marginTop: "30px", background: "#42186c", padding: "20px", borderRadius: "10px" }}>
+            <h3>Latest Threat Scans</h3>
 
             <table width="100%" cellPadding="8">
                 <thead>
