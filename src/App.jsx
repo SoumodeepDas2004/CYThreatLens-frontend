@@ -16,7 +16,7 @@ function App() {
           borderBottom: "1px solid #334155",
           paddingBottom: "10px"
         }}>
-          <NavLink to="/" end className="nav-link">Dashboard</NavLink>
+          <NavLink to="/" end className="nav-link">IP Scan Dashboard</NavLink>
           <NavLink to="/live" className="nav-link">Live Intelligence</NavLink>
           <NavLink to="/world" className="nav-link">World Update</NavLink>
           <NavLink to="/webcams" className="nav-link">Webcams</NavLink>

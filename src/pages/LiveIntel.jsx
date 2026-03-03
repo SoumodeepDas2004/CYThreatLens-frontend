@@ -14,7 +14,7 @@ export default function LiveIntel() {
   };
 
   return (
-    <div className="live-container">
+    <section className="live-container">
       <h1> Live Intelligence</h1>
 
       <div className="channel-buttons">
@@ -40,6 +40,6 @@ export default function LiveIntel() {
           allowFullScreen
         />
       </div>
-    </div>
+    </section>
   );
 }

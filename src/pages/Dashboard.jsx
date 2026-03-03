@@ -59,7 +59,7 @@ export default function Dashboard() {
     };
     return (
         <div className="app-container">
-            <h1>CYThreatLens Dashboard</h1>
+            <h1>CYThreatLens IP Dashboard</h1>
 
             {/*  Scan Section */}
             <div style={{ marginBottom: "30px", background: "#1e293b", padding: "20px", borderRadius: "8px" }}>
