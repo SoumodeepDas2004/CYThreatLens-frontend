@@ -87,6 +87,7 @@ tbody tr {
 
 button {
   border-radius: 8px;
+  color: #22c55e;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -100,6 +101,7 @@ button {
 }
 
 button:hover {
+  color: red;
   border-color: #646cff;
   background-color: #5ad9d1;
   font-weight: 700;
