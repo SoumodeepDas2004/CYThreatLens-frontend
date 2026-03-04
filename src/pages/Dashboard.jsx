@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getCountryStats, scanIP } from "../services/api";
 import WorldMap from "../components/WorldMap";
 import LatestScans from "../components/LatestScans";
+import { color } from "chart.js/helpers";
 export default function Dashboard() {
     const [stats, setStats] = useState([]);
     const [ip, setIp] = useState("");
@@ -59,26 +60,36 @@ export default function Dashboard() {
     };
     return (
         <div className="app-container">
-            <h1>CYThreatLens IP Dashboard</h1>
+            <h1 style={{color:"#72d4cf",fontSize:"40px"}}>CYThreatLens IP Dashboard</h1>
 
             {/*  Scan Section */}
             <div style={{ marginBottom: "30px", background: "#1e293b", padding: "20px", borderRadius: "8px" }}>
-                <h3>Scan IP Address</h3>
-
+                <h3 style={{color:"#abdbd9",fontSize:"30px"}}>Scan IP Address</h3>
+                <div style={{ display: "flex", gap: "15px" }}>
                 <input
                     type="text"
                     placeholder="Enter IP address..."
                     value={ip}
                     onChange={(e) => setIp(e.target.value)}
-                    style={{ padding: "8px", width: "250px", marginRight: "10px" }}
+                    style={{
+                            flex: 1,
+                            padding: "0 16px",
+                            borderRadius: "8px",
+                            width:"max-width",
+                            border: "1px solid #f940f9",
+                            background: "#182545",
+                            color: "white",
+                            textAlign:"left"
+                        }}
                 />
-
-                <button onClick={handleScan} disabled={loading}>
+                
+                <span><button onClick={handleScan} disabled={loading}>
                     {loading ? "Scanning..." : "Scan"}
-                </button>
-
+                </button></span>
+                
+                </div>
                 {scanResult && (
-                    <div style={{ marginTop: "20px" }}>
+                    <div style={{ marginTop: "20px" ,border:"solid 1px green"}}>
                         <h4>Scan Result:</h4>
                         <p><strong>IP:</strong> {scanResult.ip}</p>
                         <p><strong>Country:</strong> {scanResult.country}</p>

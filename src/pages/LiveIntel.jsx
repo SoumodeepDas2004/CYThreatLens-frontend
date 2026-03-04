@@ -14,8 +14,8 @@ export default function LiveIntel() {
   };
 
   return (
-    <section className="live-container">
-      <h1> Live Intelligence</h1>
+    <section className="app-container">
+      <h1 style={{color:"#72d4cf",fontSize:"40px"}}> Live News Intelligence</h1>
 
       <div className="channel-buttons">
         

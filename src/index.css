@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #c13030;
   }
 
   a:hover {
@@ -16,25 +16,29 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #64ff76;
   text-decoration: inherit;
 }
 
 a:hover {
   color: #535bf2;
 }
-
-body {
-  margin: 0;
-  font-family: system-ui, Arial, sans-serif;
-  background: #0f172a;
-  color: white;
-}
-
-.app-container {
-  max-width: 1400px;
-  margin: 0 auto;
+.mainapp-container
+  {max-width: 90%;
+  margin:  auto;
   padding: 40px 20px;
+}
+.app-container {
+  max-width: 90%;
+  margin:  auto;
+  padding: 40px 20px;
+  background: linear-gradient(270deg, #22184a, #040e24);
+  color: white;
+  padding: 80px 30px;
+  font-family:Arial;
+  border-radius: 2vh;
+  border:solid 1px rgba(255,255,255,0.1) 
+  
 }
 
 .section-card {
@@ -50,18 +54,21 @@ table {
   border-collapse: collapse;
 }
 
-th,
-td {
+th,td {
   padding: 10px;
   text-align: left;
+  border-right: rgba(73, 10, 10, 0.238) solid ;
+  border-radius: 1vh;
 }
 
 thead {
   border-bottom: 1px solid #334155;
+  
 }
 
 tbody tr {
   border-bottom: 1px solid #334155;
+
 }
 
 .pulse-marker {
@@ -87,7 +94,7 @@ tbody tr {
 
 button {
   border-radius: 8px;
-  color: #22c55e;
+  color: #fcfffd;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -95,13 +102,13 @@ button {
   font-family: inherit;
   background-color: #1c4eb1;
   cursor: pointer;
-  margin: 2px;
+  margin: 10px;
   transition: border-color 0.25s;
   z-index: -10;
 }
 
 button:hover {
-  color: red;
+  color: rgb(15, 58, 17);
   border-color: #646cff;
   background-color: #5ad9d1;
   font-weight: 700;
@@ -112,6 +119,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 .nav-link {
   text-decoration: none;
   color: #94a3b8;
@@ -129,18 +137,43 @@ button:focus-visible {
   background: #2563eb;
   color: white;
 }
+
 body {
   background: #0f172a;
   color: #e2e8f0;
   font-family: Arial, sans-serif;
 }
 
+/* body {
+  margin: 0;
+  font-family:  Arial, sans-serif;
+  color: rgb(159, 64, 64);
+} */
+
+
 .live-container,
 .world-container {
   max-width: 1200px;
   margin: 5px;
   padding: 40px 20px;
-  
+  background: linear-gradient(rgb(6, 50, 6),rgb(6, 6, 62),10deg);
+}
+
+.newsmap {
+  height: 564px;
+  width: 100%;
+  position: relative;
+  outline-style: none;
+  border: solid 1px green;
+  border-radius: 2vh;
+}
+.ipmap {
+  height: 564px;
+  width: 100%;
+  position: relative;
+  outline-style: none;
+  border: solid 1px rgb(28, 50, 174);
+  border-radius: 2vh;
 }
 
 .channel-buttons {
@@ -159,12 +192,14 @@ body {
 
 .channel-buttons button:hover {
   background: #334155;
+  color: #22c55e;
 }
 
 .video-wrapper {
   margin-top: 20px;
   border-radius: 10px;
   overflow: hidden;
+  
 }
 
 .update-grid {
@@ -185,6 +220,7 @@ body {
   transform: translateY(-5px);
   background: #334155;
 }
+
 .hls-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -208,6 +244,7 @@ body {
   padding: 3px 8px;
   border-radius: 4px;
 }
+
 .yt-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -226,6 +263,7 @@ body {
   height: 280px;
   border-radius: 8px;
 }
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -252,12 +290,13 @@ body {
   transform: translateY(-5px);
   background: #334155;
 }
+
 .section-title {
   font-size: 18px;
   letter-spacing: 2px;
   margin-top: 40px;
   margin-bottom: 15px;
-  color: #cbd5e1;
+  color: #74b1b3;
 }
 
 .live-dot {
@@ -268,21 +307,32 @@ body {
 
 .news-feed {
   /* background: #0e1d45; */
-  background:linear-gradient(rgb(87, 33, 180),rgb(16, 16, 130));
+  color: #22c55e;
+  background: linear-gradient(33deg, rgb(2 36 16), black, rgb(9 10 25), black, rgb(2 39 17));
   border-radius: 8px;
+  border: #535bf2 solid 1px;
   padding: 15px;
   max-height: 500px;
   overflow-y: auto;
 }
 
 .news-item {
-  padding: 15px 0;
+  padding: 15px;
   border-bottom: 1px solid #18315a;
+  border-radius: 2ch;
+}
+
+.news-item:hover {
+  padding: 12px;
+  border: 1px solid #274c87;
+  color: #7ab921;
+  font-size: 15px;
+  transform: translateY(-1px);
 }
 
 .news-category {
   font-size: 12px;
-  color: #64748b;
+  color: #cf9346;
   letter-spacing: 1px;
 }
 
@@ -290,7 +340,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   margin: 6px 0;
-  color: #f1f5f9;
+  /* color: #f1f5f9; */
 }
 
 .news-meta {

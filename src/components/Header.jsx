@@ -1,5 +1,8 @@
 // import { Shield } from "lucide-react";
 
+import { color } from "chart.js/helpers";
+import { Italic } from "lucide-react";
+
 export default function Header() {
     return (
         <div style={headerStyle}>
@@ -25,11 +28,12 @@ const headerStyle = {
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
-    padding: "0 40px",
-    background: "rgba(92, 24, 112, 0.9)",
+    padding: "0 20px",
+    background:  "linear-gradient(270deg, #051556, #290638)",
     backdropFilter: "blur(10px)",
     borderBottom: "1px solid #1e293b",
-    zIndex: 1000
+    zIndex: 1000,
+    borderRadius:"1vh"
 };
 
 const brandContainer = {
@@ -42,6 +46,7 @@ const brandContainer = {
 };
 
 const brandText = {
-    color: "white",
-    fontSize: "30px"
+    color: "lightgreen",
+    fontSize: "40px",
+    fontWeight:"bolder"
 };

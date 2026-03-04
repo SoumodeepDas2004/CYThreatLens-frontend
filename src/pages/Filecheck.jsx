@@ -64,9 +64,9 @@ export default function Filecheck() {
     };
 
     return (
-        <div style={{ maxWidth: "1200px", margin: "auto", background:"4987F2" }}>
+        <div  className="app-container">
 
-            <h1> SOC File Intelligence</h1>
+            <h1 style={{color:"#72d4cf",fontSize:"40px"}}> SOC File Intelligence</h1>
 
             {/* ===== Manual Hash Input ===== */}
             <div style={{
@@ -188,7 +188,7 @@ export default function Filecheck() {
             )}
             {/* ===== History ===== */}
             <div>
-                <h2>Recent File Scans</h2>
+                <h2 style={{color:"#72d4cf",fontSize:"20px"}}>Recent File Scans</h2>
                 {history.map((item) => (
                     <div key={item.id}>
                         {item.hash || item.md5} - {item.risk_level}

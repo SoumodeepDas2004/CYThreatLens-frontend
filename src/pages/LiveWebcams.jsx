@@ -27,8 +27,8 @@ export default function LiveWebcams() {
     };
 
     return (
-        <div className="webcam-container">
-            <h1> Global Live Webcams </h1>
+        <div className="app-container">
+            <h1 style={{color:"#72d4cf",fontSize:"40px"}}> Global Live Webcams </h1>
 
             <div className="region-tabs">
                 <button onClick={() => setRegion("middleeast")}>Middle East</button>

@@ -13,7 +13,7 @@ function App() {
        {/* Global Header */}
       <div><Header /></div>
 
-      <div className="app-container">
+      <div className="mainapp-container" >
 
         {/* Top Navigation */}
         <nav style={{

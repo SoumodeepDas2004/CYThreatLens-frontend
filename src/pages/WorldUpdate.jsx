@@ -21,11 +21,11 @@ export default function WorldUpdate() {
   }, []);
 
   return (
-    <div className="world-container">
+    <div className="app-container">
 
-      <h1> Global News Impact Map</h1>
+      <h1 style={{color:"#72d4cf",fontSize:"40px"}}> Global News Impact Map</h1>
       <NewsMap articles={globalNews} />
-      <h2 style={{marginTop:"40px"}}>📰 Global Headlines</h2>
+      <h2 style={{marginTop:"40px"}}>Global Headlines</h2>
 <h2 className="section-title">
   WORLD NEWS <span className="live-dot">● LIVE</span>
 </h2>
@@ -47,7 +47,7 @@ export default function WorldUpdate() {
     </div>
   ))}
 </div>
-      <h2 style={{marginTop:"40px"}}>📰 Cyber & Tech News</h2>
+      <h2 style={{marginTop:"40px"}}> Cyber & Tech News</h2>
 
       <h2 className="section-title">
   CYBER & TECH <span className="live-dot">● LIVE</span>

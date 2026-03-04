@@ -1,13 +1,16 @@
+import { Radius } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Landing() {
     return (
         <div style={{
-            background: "radial-gradient(circle at 20% 20%, #1e293b, #0f172a)",
+            background: "linear-gradient(270deg, #152920, #0e1422)",
             color: "white",
             minHeight: "100vh",
             padding: "80px 30px",
-            fontFamily: "Inter, Arial"
+            fontFamily: "Inter, Arial",
+            borderRadius: "2vh",
+            border:"solid 1px rgba(255,255,255,0.3) "
         }}>
 
             <div style={{ maxWidth: "1100px", margin: "auto" }}>
@@ -25,7 +28,7 @@ export default function Landing() {
                     <p style={{
                         fontSize: "20px",
                         maxWidth: "750px",
-                        color: "#cbd5e1",
+                        color: "#72d4cf",
                         lineHeight: "1.7"
                     }}>
                         An Integrated Cyber Threat Intelligence & SOC Monitoring Platform
@@ -35,7 +38,7 @@ export default function Landing() {
                     </p>
 
                     <div style={{ marginTop: "40px", display: "flex", gap: "20px" }}>
-                        <Link to="/">
+                        <Link to="/Dashboard">
                             <button style={primaryBtn}>
                                 Enter Intelligence Console →
                             </button>
@@ -127,14 +130,14 @@ const modules = [
 
 const primaryBtn = {
     padding: "15px 30px",
-    background: "#7c3aed",
+    background: "linear-gradient(310deg, rgb(31, 35, 118), rgb(22, 7, 30))",
     border: "none",
     borderRadius: "8px",
     color: "white",
-    fontSize: "16px",
+    fontSize: "20px",
     fontWeight: "600",
     cursor: "pointer",
-    boxShadow: "0 0 25px rgba(124,58,237,0.5)"
+    boxShadow: "0 0 25px rgba(58, 64, 237, 0.5)"
 };
 
 const gridStyle = {
@@ -144,13 +147,15 @@ const gridStyle = {
 };
 
 const cardStyle = {
-    background: "#111827",
+    background: "linear-gradient(310deg, rgb(16, 44, 16),black, rgb(7, 5, 37))",
     padding: "25px",
     borderRadius: "12px",
-    border: "1px solid #1e293b"
+    border: "1px solid #231a87",
+    color:"lightgreen",
+    boxShadow:"0 0 15px rgba(58, 201, 237, 0.5)"
 };
 
 const textStyle = {
-    color: "#cbd5e1",
+    color: "#2cc6c9",
     lineHeight: "1.7"
 };

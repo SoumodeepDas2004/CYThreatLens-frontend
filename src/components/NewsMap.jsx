@@ -13,7 +13,7 @@ export default function NewsMap({ articles }) {
     };
 
     return (
-        <MapContainer center={[20, 0]} zoom={2} style={{ height: "500px", width: "100%" }}>
+        <MapContainer center={[20, 0]} zoom={2} style={{ height: "564px", width: "100%" }} className="newsmap">
             <TileLayer
                 url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             />
