@@ -36,7 +36,7 @@ export default function LiveIntel() {
           height="500"
           src={channels[activeChannel]}
           title="Live News"
-          frameBorder="0"
+          
           allowFullScreen
         />
       </div>
