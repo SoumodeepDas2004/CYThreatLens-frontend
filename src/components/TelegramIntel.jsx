@@ -22,12 +22,10 @@ export default function TelegramIntel() {
     }, []);
 
     return (
-        <div style={{
-            background: "#111827",
-            padding: "20px",
-            borderRadius: "10px"
-        }}>
-
+        <>
+        {
+       
+        /* 
             {messages.length === 0 && (
                 <p style={{ color: "#94a3b8" }}>Loading intelligence feed...</p>
             )}
@@ -52,8 +50,27 @@ export default function TelegramIntel() {
                 </div>
 
 
-            ))}
+            ))} */}
 
-        </div>
+            {
+                
+        messages.map((article, index) => (
+            <div key={index} className="news-item">
+                <div className="news-category">
+                    {article.source?.toUpperCase()}
+                </div>
+
+                <div className="news-headline">
+                    {article.title}
+                </div>
+
+                <div className="news-meta">
+                    {new Date(article.date).toLocaleString()}
+                </div>
+            </div>
+        ))
+    }
+    </>
+        
     );
 }

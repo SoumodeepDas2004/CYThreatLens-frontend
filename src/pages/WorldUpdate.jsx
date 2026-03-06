@@ -36,6 +36,7 @@ export default function WorldUpdate() {
           <div key={index} className="news-item">
             <div className="news-category">
               {article.source?.toUpperCase()}
+              <span>{article.Date}</span>
             </div>
 
             <div className="news-headline">
@@ -43,16 +44,19 @@ export default function WorldUpdate() {
             </div>
 
             <div className="news-meta">
-              {new Date(article.publishedAt).toLocaleString()}
+
+              <a href={article.url} target="_blank" rel="noopener noreferrer">
+                Source_Link
+              </a>
             </div>
           </div>
         ))}
       </div>
       <h2 style={{ marginTop: "40px" }}>Live Intelligence</h2>
-      <h3  className="section-title" > Telegram OSINT Feed <span className="live-dot">● LIVE</span></h3>
-      <div className="news-feed" >  
+      <h3 className="section-title" > Telegram OSINT Feed <span className="live-dot">● LIVE</span></h3>
+      <div className="news-feed" >
         <TelegramIntel />
-        </div>
+      </div>
       <h2 style={{ marginTop: "40px" }}> Cyber & Tech News</h2>
 
       <h3 className="section-title">
@@ -64,14 +68,22 @@ export default function WorldUpdate() {
           <div key={index} className="news-item">
             <div className="news-category">
               {article.source?.toUpperCase()}
+              
             </div>
 
             <div className="news-headline">
               {article.title}
+              {/* <span>{article.url}</span> */}
+              
             </div>
 
             <div className="news-meta">
-              {new Date(article.publishedAt).toLocaleString()}
+             <span className="news-meta">
+
+                <a href={article.url} target="_blank" rel="noopener noreferrer">
+                  Source_Link
+                </a>
+              </span> {new Date(article.publishedAt).toLocaleString()}
             </div>
           </div>
         ))}
