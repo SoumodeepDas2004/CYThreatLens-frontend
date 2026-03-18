@@ -348,3 +348,34 @@ body {
   font-size: 12px;
   color: #94a3b8;
 }
+.popup-container {
+    /* Set specific height and width */
+    width: 350px;
+    height: 150px; 
+    
+    /* Add scrollbars when content overflows */
+    overflow:scroll; 
+    
+    /* Additional styling for the popup appearance */
+    border: 1px solid #33df1c;
+    padding: 10px;
+    background-color: #8ecfd2;
+    position: fixed; /* Fixes position relative to the viewport */
+    top: 30%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Ensures perfect centering */
+    z-index: 1000; /* Ensures it's above other content */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 2vh;
+}
+
+/* Optional: CSS for the background overlay */
+/* .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+} */

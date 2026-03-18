@@ -9,7 +9,8 @@ export default function NewsMap({ articles }) {
         Russia: [60, 100],
         France: [46, 2],
         Ukraine: [48, 31],
-        Israel: [31, 35]
+        Israel: [31, 35],
+        Unk: [0, 0]
     };
 
     return (
@@ -19,17 +20,27 @@ export default function NewsMap({ articles }) {
             />
 
             {articles.map((article, index) => {
-                const coords = countryCoords[article.country];
-                if (!coords) return null;
+
+                if (!article.latitude || !article.longitude) return null;
 
                 return (
-                    <Marker key={index} position={coords}>
-                        <Popup>
+                    <Marker
+                        key={index}
+                        position={[article.latitude, article.longitude]}
+
+                    >
+                        <Popup className="popup-container">
+                            {article.country}<br />
                             <strong>{article.title}</strong><br />
-                            {article.source}
+                            <span>{article.source} </span>|| 
+                            <a href={article.url} target="_blank">View Source</a>  
+                            <br />
+                            
+            
                         </Popup>
                     </Marker>
                 );
+
             })}
         </MapContainer>
     );

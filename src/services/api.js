@@ -16,5 +16,14 @@ export const getTechNews = async () => {
   return fetch("http://127.0.0.1:8000/news/tech")
     .then(res => res.json());
 };
+export const getRssNews = async () => {
+  return fetch("http://127.0.0.1:8000/news/rss")
+    .then(res => res.json());
+};
+export const getintels = async () => {
+  return fetch("http://127.0.0.1:8000/intel/events")
+    .then(res => res.json());
+};
+
 
 export default API;
