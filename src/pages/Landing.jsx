@@ -46,7 +46,7 @@ export default function Landing() {
                                 style={{
                                     ...primaryBtn,
                                     background: hover
-                                        ? "linear-gradient(310deg, rgb(58, 64, 237), rgb(80, 20, 120))"
+                                        ? "linear-gradient(310deg, rgb(58, 64, 237), rgba(168, 72, 166, 0.54))"
                                         : primaryBtn.background,
                                     boxShadow: hover
                                         ? "0 0 35px rgb(89, 214, 51)"

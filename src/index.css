@@ -124,9 +124,10 @@ button:focus-visible {
 .nav-link {
   text-decoration: none;
   color: #94a3b8;
-  padding: 8px 16px;
+  padding: 9px 18px;
   border-radius: 6px;
   transition: 0.3s;
+  text-align:center;
 }
 
 .nav-link:hover {
@@ -448,4 +449,5 @@ body::after {
     position: relative;
     z-index: 2;
     opacity: .8;
+    margin-top: 0px;
 }

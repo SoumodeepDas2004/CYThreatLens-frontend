@@ -4,43 +4,53 @@ import LiveIntel from "./pages/LiveIntel";
 import WorldUpdate from "./pages/WorldUpdate";
 import LiveWebcams from "./pages/LiveWebcams";
 import SOC from "./pages/Filecheck";
+import EmailChecker from "./pages/EmailChecker";
 import Landing from "./pages/Landing";
 import Header from "./components/Header";
-import { color } from "chart.js/helpers";
+import Footer from "./components/footer";
+// import { color } from "chart.js/helpers";
 
 function App() {
   return (
-    <Router>
-      {/* Global Header */}
-      <div><Header /></div>
-      <div class="cyber-bg"></div>
-      <div class="cyber-overlay"></div>
+  <Router>
 
-      <div className="mainapp-container" >
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      minHeight: "100vh"
+    }}>
 
-        {/* Top Navigation */}
+      <Header />
+
+      {/* Background layers */}
+      <div className="cyber-bg"></div>
+      <div className="cyber-overlay"></div>
+
+      {/* MAIN CONTENT */}
+      <div className="mainapp-container" style={{ flex: 1 }}>
+
+        {/* NAV */}
         <nav style={{
           display: "flex",
           gap: "50px",
-          margin: "20px",
+          margin: "10px",
           borderBottom: "1px solid #334155",
           padding: "5px",
           background: "black",
           opacity: ".7",
           borderRadius: "2vh",
-          fontSize:"18px"
+          fontSize: "18px"
         }}>
-          <NavLink to="/" end className="nav-link">About</NavLink>
+          <NavLink to="/" end className="nav-link">About Us</NavLink>
           <NavLink to="/Dashboard" className="nav-link">IP Scan & Dashboard</NavLink>
           <NavLink to="/filecheck" className="nav-link">File Inteligence</NavLink>
+          <NavLink to="/email" className="nav-link">Email Checker</NavLink>
           <NavLink to="/live" className="nav-link">Live Intelligence</NavLink>
           <NavLink to="/world" className="nav-link">World Update</NavLink>
-          <NavLink to="/webcams" className="nav-link">Webcams</NavLink>
-
-
+          <NavLink to="/webcams" className="nav-link">Live Webcams</NavLink>
         </nav>
 
-        {/* Routes */}
+        {/* ROUTES */}
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/Dashboard" element={<Dashboard />} />
@@ -48,11 +58,17 @@ function App() {
           <Route path="/world" element={<WorldUpdate />} />
           <Route path="/webcams" element={<LiveWebcams />} />
           <Route path="/filecheck" element={<SOC />} />
+          <Route path="/email" element={<EmailChecker />} />
         </Routes>
 
       </div>
-    </Router>
-  );
-}
+
+      {/* ✅ FOOTER ALWAYS VISIBLE */}
+      <Footer />
+
+    </div>
+
+  </Router>
+);}
 
 export default App;

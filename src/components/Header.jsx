@@ -1,8 +1,9 @@
 // import { Shield } from "lucide-react";
 
-import { color } from "chart.js/helpers";
-import { Italic } from "lucide-react";
+// import { color, fontString } from "chart.js/helpers";
+// import { Italic } from "lucide-react";
 
+import UTCClock from "./clock";
 export default function Header() {
     return (
         <div style={headerStyle}>
@@ -11,10 +12,11 @@ export default function Header() {
                     src="/logo.ico"
                     alt="logo"
                 style={{ width: "90px", height: "90px" }} 
-                />
+                /><span style={brandText}>CYThreatLens</span>
                 </div>
-                <span style={brandText}>CYThreatLens</span>
-            
+                
+            <span style={{}} ><UTCClock /></span>
+
         </div>
     );
 }
@@ -28,25 +30,32 @@ const headerStyle = {
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
-    padding: "0 20px",
-    background:  "linear-gradient(270deg, #051556, #290638)",
+    // padding: "0 5px",
+    background:  "linear-gradient(270deg, #12246b, #290638)",
     backdropFilter: "blur(10px)",
     borderBottom: "1px solid #1e293b",
     zIndex: 1000,
-    borderRadius:"1vh"
+    borderRadius:"1vh",
+    //  display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between", // 🔥 KEY LINE
+    padding: "10px 30px"
 };
 
 const brandContainer = {
     display: "flex",
     alignItems: "left",
     gap: "8px",
-    fontWeight: "600",
+    fontWeight: "300",
     fontSize: "20px",
     letterSpacing: "0.5px"
 };
 
 const brandText = {
-    color: "lightgreen",
+    color: "rgb(113, 192, 176)",
     fontSize: "40px",
-    fontWeight:"bolder"
+    fontWeight:"bold",
+    fontString:"Brush Script MT",
+    padding:"15px 2px"
+    // fontString:"Papyrus"
 };
