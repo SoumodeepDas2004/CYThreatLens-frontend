@@ -1,7 +1,10 @@
 import { Radius } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Landing() {
+    const [hover, setHover] = useState(false);
+
     return (
         <div style={{
             background: "linear-gradient(270deg, #152920, #0e1422)",
@@ -10,7 +13,7 @@ export default function Landing() {
             padding: "80px 30px",
             fontFamily: "Inter, Arial",
             borderRadius: "2vh",
-            border:"solid 1px rgba(255,255,255,0.3) "
+            border: "solid 1px rgba(255,255,255,0.3) "
         }}>
 
             <div style={{ maxWidth: "1100px", margin: "auto" }}>
@@ -39,7 +42,21 @@ export default function Landing() {
 
                     <div style={{ marginTop: "40px", display: "flex", gap: "20px" }}>
                         <Link to="/Dashboard">
-                            <button style={primaryBtn}>
+                            <button
+                                style={{
+                                    ...primaryBtn,
+                                    background: hover
+                                        ? "linear-gradient(310deg, rgb(58, 64, 237), rgb(80, 20, 120))"
+                                        : primaryBtn.background,
+                                    boxShadow: hover
+                                        ? "0 0 35px rgb(89, 214, 51)"
+                                        : primaryBtn.boxShadow,
+                                    transform: hover ? "translateY(-3px) scale(1.03)" : "none",
+                                    transition: "all 0.3s ease"
+                                }}
+                                onMouseEnter={() => setHover(true)}
+                                onMouseLeave={() => setHover(false)}
+                            >
                                 Enter Intelligence Console →
                             </button>
                         </Link>
@@ -137,7 +154,7 @@ const primaryBtn = {
     fontSize: "20px",
     fontWeight: "600",
     cursor: "pointer",
-    boxShadow: "0 0 25px rgba(58, 64, 237, 0.5)"
+    boxShadow: "0 0 25px rgba(142, 214, 237, 0.7)"
 };
 
 const gridStyle = {
@@ -151,8 +168,8 @@ const cardStyle = {
     padding: "25px",
     borderRadius: "12px",
     border: "1px solid #231a87",
-    color:"lightgreen",
-    boxShadow:"0 0 15px rgba(58, 201, 237, 0.5)"
+    color: "lightgreen",
+    boxShadow: "0 0 15px rgba(43, 233, 56, 0.74)"
 };
 
 const textStyle = {

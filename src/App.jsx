@@ -6,30 +6,37 @@ import LiveWebcams from "./pages/LiveWebcams";
 import SOC from "./pages/Filecheck";
 import Landing from "./pages/Landing";
 import Header from "./components/Header";
+import { color } from "chart.js/helpers";
 
 function App() {
   return (
     <Router>
-       {/* Global Header */}
+      {/* Global Header */}
       <div><Header /></div>
+      <div class="cyber-bg"></div>
+      <div class="cyber-overlay"></div>
 
       <div className="mainapp-container" >
 
         {/* Top Navigation */}
         <nav style={{
           display: "flex",
-          gap: "20px",
-          marginBottom: "30px",
+          gap: "50px",
+          margin: "20px",
           borderBottom: "1px solid #334155",
-          paddingBottom: "10px"
+          padding: "5px",
+          background: "black",
+          opacity: ".7",
+          borderRadius: "2vh",
+          fontSize:"18px"
         }}>
           <NavLink to="/" end className="nav-link">About</NavLink>
-          <NavLink to="/Dashboard"  className="nav-link">IP Scan Dashboard</NavLink>
+          <NavLink to="/Dashboard" className="nav-link">IP Scan & Dashboard</NavLink>
           <NavLink to="/filecheck" className="nav-link">File Inteligence</NavLink>
           <NavLink to="/live" className="nav-link">Live Intelligence</NavLink>
           <NavLink to="/world" className="nav-link">World Update</NavLink>
           <NavLink to="/webcams" className="nav-link">Webcams</NavLink>
-          
+
 
         </nav>
 

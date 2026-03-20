@@ -139,11 +139,11 @@ button:focus-visible {
   color: white;
 }
 
-body {
+/* body {
   background: #0f172a;
   color: #e2e8f0;
   font-family: Arial, sans-serif;
-}
+} */
 
 /* body {
   margin: 0;
@@ -379,3 +379,73 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
 } */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0f1c;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Background cyber image layer */
+/* body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: url("src/assets/cyber-bg.jpeg") center/cover no-repeat;
+
+    opacity: 0.12; KEY: keeps it subtle
+    
+} */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(10, 15, 28, 0.95),
+        rgba(20, 0, 40, 0.9)
+    );
+
+    z-index: -1;
+}
+.cyber-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("/src/assets/cyber-bg.jpeg") center/cover no-repeat;
+
+    opacity: 1; /* IMPORTANT */
+    z-index: 0; /* bring to front for testing */
+}
+.cyber-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.45;
+    background: linear-gradient(
+        135deg,
+        rgba(10, 15, 28, 0.95),
+        rgba(40, 0, 80, 0.9)
+    );
+
+    z-index: 1;
+}
+.mainapp-container{
+    position: relative;
+    z-index: 2;
+    opacity: .8;
+}
