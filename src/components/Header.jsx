@@ -28,7 +28,7 @@ const headerStyle = {
     left: 0,
     height: "60px",
     display: "flex",
-    justifyContent: "flex-start",
+    // justifyContent: "flex-start",
     alignItems: "center",
     // padding: "0 5px",
     background:  "linear-gradient(270deg, #12246b, #290638)",
@@ -37,8 +37,8 @@ const headerStyle = {
     zIndex: 1000,
     borderRadius:"1vh",
     //  display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between", // 🔥 KEY LINE
+    // alignItems: "center",
+    justifyContent: "space-between",
     padding: "10px 30px"
 };
 

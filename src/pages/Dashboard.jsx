@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getCountryStats, scanIP } from "../services/api";
 import WorldMap from "../components/WorldMap";
 import LatestScans from "../components/LatestScans";
-import { color } from "chart.js/helpers";
+// import { color } from "chart.js/helpers";
 export default function Dashboard() {
     const [stats, setStats] = useState([]);
     const [ip, setIp] = useState("");
@@ -14,7 +14,7 @@ export default function Dashboard() {
             setStats(res.data);
         });
     };
-
+// 
     const handleScan = async () => {
         if (!ip) return;
 
