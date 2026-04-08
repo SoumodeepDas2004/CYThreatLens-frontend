@@ -1,27 +1,29 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://127.0.0.1:8000",
+    baseURL: import.meta.env.VITE_API_URL,
 });
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 export const getCountryStats = () => API.get("/scan/country-stats");
 export const getMapData = () => API.get("/scan/map-data");
 export const getHistory = () => API.get("/scan/history");
 export const scanIP = (ip) => API.post("/scan/ip", { ip });
 export const getGlobalNews = async () => {
-    return fetch("http://127.0.0.1:8000/news/global")
+    return fetch(`${API_URL}`+"/news/global")
         .then(res => res.json());
 };
 export const getTechNews = async () => {
-  return fetch("http://127.0.0.1:8000/news/tech")
+  return fetch(`${API_URL}`+"/news/tech")
     .then(res => res.json());
 };
 export const getRssNews = async () => {
-  return fetch("http://127.0.0.1:8000/news/rss")
+  return fetch(`${API_URL}`+"/news/rss")
     .then(res => res.json());
 };
 export const getintels = async () => {
-  return fetch("http://127.0.0.1:8000/intel/events")
+  return fetch(`${API_URL}`+"/intel/events")
     .then(res => res.json());
 };
 
