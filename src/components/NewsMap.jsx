@@ -1,8 +1,8 @@
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import "leaflet/dist/leaflet.css";
 
-import L from "leaflet";
+// import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { CircleMarker, Popup } from "react-leaflet";
