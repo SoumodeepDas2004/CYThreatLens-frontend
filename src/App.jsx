@@ -12,6 +12,11 @@ import Footer from "./components/footer";
 const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
+  useEffect(() => {
+    fetch(`${API_URL}`)
+      .then(() => console.log("Backend wake-up ping sent"))
+      .catch(() => console.log("Backend waking up..."));
+  }, []);
   return (
   <Router>
 
