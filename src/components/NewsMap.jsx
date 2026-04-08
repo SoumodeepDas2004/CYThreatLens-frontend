@@ -54,7 +54,6 @@ export default function NewsMap({ articles }) {
                             <a href={article.url} target="_blank">View Source</a>
                             <br />
 
-
                         </Popup>
                     </CircleMarker>
                 );
