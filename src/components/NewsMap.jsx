@@ -5,12 +5,12 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
-
+import { CircleMarker, Popup } from "react-leaflet";
 delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
+    iconUrl: markerIcon,
+    shadowUrl: markerShadow,
 });
 
 export default function NewsMap({ articles }) {
@@ -37,21 +37,26 @@ export default function NewsMap({ articles }) {
                 if (!article.latitude || !article.longitude) return null;
 
                 return (
-                    <Marker
+                    <CircleMarker
                         key={index}
-                        position={[article.latitude, article.longitude]}
-
+                        center={[article.latitude, article.longitude]}
+                        radius={6}
+                        pathOptions={{
+                            color: "#00ffcc",
+                            fillColor: "#00ffcc",
+                            fillOpacity: 0.8
+                        }}
                     >
                         <Popup className="popup-container">
                             {article.country}<br />
                             <strong>{article.title}</strong><br />
-                            <span>{article.source} </span>|| 
-                            <a href={article.url} target="_blank">View Source</a>  
+                            <span>{article.source} </span>||
+                            <a href={article.url} target="_blank">View Source</a>
                             <br />
-                            
-            
+
+
                         </Popup>
-                    </Marker>
+                    </CircleMarker>
                 );
 
             })}
