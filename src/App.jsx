@@ -8,6 +8,7 @@ import EmailChecker from "./pages/EmailChecker";
 import Landing from "./pages/Landing";
 import Header from "./components/Header";
 import Footer from "./components/footer";
+import { useEffect } from "react";
 // import { color } from "chart.js/helpers";
 const API_URL = import.meta.env.VITE_API_URL;
 
