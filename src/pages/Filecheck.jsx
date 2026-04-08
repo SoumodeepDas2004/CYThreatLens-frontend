@@ -1,6 +1,8 @@
 import { color } from "chart.js/helpers";
 import { useState, useEffect } from "react";
 // import './../index.css'
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function Filecheck() {
 
     const [hashInput, setHashInput] = useState("");
@@ -18,7 +20,7 @@ export default function Filecheck() {
 
     // ===== Send hash to backend =====
     const analyzeHash = async (hash) => {
-        const res = await fetch("http://127.0.0.1:8000/soc/file", {
+        const res = await await fetch(`${API_URL}`+"/soc/file", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ hash })
@@ -48,7 +50,7 @@ export default function Filecheck() {
     };
 
     const loadHistory = async () => {
-        const res = await fetch("http://127.0.0.1:8000/soc/history");
+        const res = await await fetch(`${API_URL}`+"/soc/history");
         const data = await res.json();
         setHistory(data);
     };

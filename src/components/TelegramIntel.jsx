@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+// fetch(`${API_URL}/your-endpoint`)
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function TelegramIntel() {
 
     const [messages, setMessages] = useState([]);
 
     const fetchTelegramIntel = () => {
-        fetch("http://127.0.0.1:8000/telegram/intel")
+        fetch(`${API_URL}/telegram/intel`)
             .then(res => res.json())
             .then(data => setMessages(data))
             .catch(err => console.log(err));

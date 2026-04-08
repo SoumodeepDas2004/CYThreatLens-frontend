@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getGlobalNews, getTechNews,getRssNews,getintels } from "../services/api";
 import NewsMap from "../components/NewsMap";
 import TelegramIntel from "../components/TelegramIntel";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function WorldUpdate() {
 

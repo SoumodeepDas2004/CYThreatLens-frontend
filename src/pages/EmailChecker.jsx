@@ -1,5 +1,6 @@
 import { Italic } from "lucide-react";
 import { useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function EmailAnalyzer() {
     const [result, setResult] = useState(null);
@@ -16,7 +17,7 @@ export default function EmailAnalyzer() {
         setResult(null);
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/email/analyze-eml", {
+            const res = await fetch(`${API_URL}`+"/email/analyze-eml", {
                 method: "POST",
                 body: formData
             });

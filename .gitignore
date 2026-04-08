@@ -11,7 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
-
+# dependencies
+node_modules/
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +23,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# build output
+dist/
+build/
+
+# environment variables
+.env
+.env.local
+.env.*.local
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# misc
+*.swp

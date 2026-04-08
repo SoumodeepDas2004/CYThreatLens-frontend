@@ -1,6 +1,7 @@
 import { Radius } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Landing() {
     const [hover, setHover] = useState(false);

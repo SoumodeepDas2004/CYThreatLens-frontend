@@ -3,6 +3,8 @@ import { getCountryStats, scanIP } from "../services/api";
 import WorldMap from "../components/WorldMap";
 import LatestScans from "../components/LatestScans";
 // import { color } from "chart.js/helpers";
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function Dashboard() {
     const [stats, setStats] = useState([]);
     const [ip, setIp] = useState("");

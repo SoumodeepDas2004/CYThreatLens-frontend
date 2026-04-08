@@ -9,6 +9,7 @@ import Landing from "./pages/Landing";
 import Header from "./components/Header";
 import Footer from "./components/footer";
 // import { color } from "chart.js/helpers";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   return (

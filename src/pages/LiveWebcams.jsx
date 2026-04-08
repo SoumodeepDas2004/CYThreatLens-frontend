@@ -44,7 +44,7 @@ export default function LiveWebcams() {
                         <h4>{stream.title}</h4>
                         <iframe
                             src={stream.url}
-                            frameBorder="0"
+                            // frameBorder="0"
                             allow="autoplay; encrypted-media"
                             allowFullScreen
                             title={stream.title}
